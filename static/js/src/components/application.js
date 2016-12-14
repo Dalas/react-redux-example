@@ -12,17 +12,22 @@ export default (state) => {
                 menuTabs={ state.menuTabs }
                 selectedMenuTab={ state.selectedMenuTab }
                 selectMenuTab={ state.selectMenuTab }
+                className="main-menu"
             />
-            <Menu
-                menuTabs={ state.innerMenuTabs }
-                selectedMenuTab={ state.selectedInnerMenuTab }
-                selectMenuTab={ state.selectInnerMenuTab }
-            />
-            <Menu
-                menuTabs={ state.lastMenuTabs }
-                selectedMenuTab={ state.selectedLastMenuTab }
-                selectMenuTab={ state.selectLastMenuTab }
-            />
+            <div className="container">
+                <Menu
+                    menuTabs={ state.innerMenuTabs }
+                    selectedMenuTab={ state.selectedInnerMenuTab }
+                    selectMenuTab={ state.selectInnerMenuTab }
+                    className="nav-tabs-menu"
+                />
+                <Menu
+                    menuTabs={ state.lastMenuTabs }
+                    selectedMenuTab={ state.selectedLastMenuTab }
+                    selectMenuTab={ state.selectLastMenuTab }
+                    className="simple-menu"
+                />
+            </div>
         </div>
     )
 }

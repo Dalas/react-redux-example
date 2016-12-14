@@ -1,16 +1,70 @@
-.menu {
+li {
     list-style-type: none;
     cursor: pointer;
 }
 
-.menu-tab {
-    color: black;
+.main-menu {
+    border: 1px solid #cccccc;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.menu-tab:hover {
-    color: grey;
+.main-menu li {
+    width: 33.3%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #dddddd;
 }
 
-.menu .selected {
-    color: red;
+.main-menu li:hover {
+    background-color: #aaaaaa;
+}
+
+.main-menu li.selected {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+.main-menu li:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.main-menu li:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.container {
+    border: 1px solid #cccccc;
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.nav-tabs-menu {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-tabs-menu li {
+    background-color: #cccccc;
+    width: 100%;
+    background-clip: border-box;
+}
+
+.nav-tabs-menu li:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.nav-tabs-menu li:last-child {
+    border-radius: 0 10px 0 0;
 }
