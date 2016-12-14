@@ -1,0 +1,16 @@
+.menu {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.menu-tab {
+    color: black;
+}
+
+.menu-tab:hover {
+    color: grey;
+}
+
+.menu .selected {
+    color: red;
+}
