@@ -1,34 +1,32 @@
-/**
- * Created by yura on 14.12.16.
- */
+// @flow
 
 import { connect } from 'react-redux';
 import { selectMenuTab, selectInnerMenuTab, selectLastMenuTab } from '../actions/selectActions';
 import App from '../components/application';
 
 
-function getCurrentMenuTabs (state) {
+function getCurrentMenuTabs (state: Object): Object {
     return Object.assign({}, state, {
         innerMenuTabs: state.innerMenuTabs[ state.selectedMenuTab ],
         lastMenuTabs: state.lastMenuTabs[ state.selectedMenuTab ][ state.selectedInnerMenuTab ]
     })
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state: Object, ownProps: Object): Object => {
     state = Object.assign({}, state, ownProps.routeParams);
-    console.log(state);
+
     return getCurrentMenuTabs( state );
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: Function): Object => {
     return {
-        selectMenuTab: (index) => {
+        selectMenuTab: (index: number) => {
             dispatch(selectMenuTab(index))
         },
-        selectInnerMenuTab: (index) => {
+        selectInnerMenuTab: (index: number) => {
             dispatch(selectInnerMenuTab(index))
         },
-        selectLastMenuTab: (index) => {
+        selectLastMenuTab: (index: number) => {
             dispatch(selectLastMenuTab(index))
         }
     }

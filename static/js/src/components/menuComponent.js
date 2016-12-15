@@ -1,20 +1,25 @@
-/**
- * Created by yura on 13.12.16.
- */
+// @flow
 
 import React from "react";
 import MenuItem from './menuTabComponent';
 
 
-const MenuComponent  = ({ menuTabs, selectedMenuTab, className, defaultPath }) => {
+type CompProps = {
+    menuTabs: Array<string>;
+    selectedMenuTab: string;
+    className: string;
+    defaultPath: string;
+}
+
+const MenuComponent  = ({ menuTabs, selectedMenuTab, className, defaultPath }: CompProps) => {
     return (
         <ul className={ className }>
-            { menuTabs.map( (value, index) =>
+            { menuTabs.map( (value: string, index: number) =>
                 <MenuItem
                     key={ index }
                     value={ value }
                     isSelected={ selectedMenuTab == index }
-                    path={ defaultPath.replace("{0}", index) }
+                    path={ defaultPath.replace("{0}", index.toString() ) }
                 />
             )}
         </ul>

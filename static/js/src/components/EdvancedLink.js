@@ -1,11 +1,14 @@
-/**
- * Created by yura on 15.12.16.
- */
+// @flow
 
 import React from 'react';
 import { Link } from 'react-router';
 
-export default ({ path, children }) => {
+type CompProps = {
+    path?: string;
+    children?: any
+}
+
+export default ({ path, children }: CompProps) => {
     return (
         <Link to={ path } >
             { children }

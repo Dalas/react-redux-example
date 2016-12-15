@@ -1,11 +1,9 @@
-/**
- * Created by yura on 14.12.16.
- */
+// @flow
 
 import React from 'react';
 import Menu from './menuComponent';
 
-export default (state) => {
+export default (state: Object) => {
     return (
         <div>
             <Menu

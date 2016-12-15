@@ -1,12 +1,16 @@
-/**
- * Created by yura on 14.12.16.
- */
+// @flow
 
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 
-const MenuTabComponent = ({ value, isSelected, path }) => {
+type CompProps = {
+    value?: string;
+    isSelected?: boolean;
+    path: string;
+}
+
+const MenuTabComponent = ({ value, isSelected, path }: CompProps) => {
     return (
         <li className={ isSelected ? "menu-tab selected" : "menu-tab" } >
             <Link to={ path } >{ value }</Link>

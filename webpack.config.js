@@ -9,7 +9,8 @@ module.exports = {
 
     output: {
         path: path.resolve(__dirname, 'static/js/dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        libraryTarget: "umd"
     },
 
     module: {
@@ -21,7 +22,11 @@ module.exports = {
                 ],
                 loader: "babel-loader",
                 options: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'react'],
+                    plugins: [
+                        "tcomb",
+                        "transform-flow-strip-types"
+                    ]
                 }
             }
         ]

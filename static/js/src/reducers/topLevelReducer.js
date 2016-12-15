@@ -1,8 +1,7 @@
-/**
- * Created by yura on 14.12.16.
- */
+// @flow
 
 import { SELECT_MENU_TAB, SELECT_INNER_MENU_TAB, SELECT_LAST_MENU_TAB } from '../actions/actionTypes';
+
 
 const initialState = {
     menuTabs: [
@@ -80,12 +79,12 @@ const initialState = {
             ]
         ]
     ],
-    selectedMenuTab: 0,
-    selectedInnerMenuTab: 0,
-    selectedLastMenuTab: 0
+    selectedMenuTab: '0',
+    selectedInnerMenuTab: '0',
+    selectedLastMenuTab: '0'
 };
 
-export default function menuReducer (state = initialState, action) {
+export default function menuReducer (state: Object = initialState, action: Object): Object {
     switch (action.type) {
         case SELECT_MENU_TAB:
             return Object.assign({}, state, {selectedMenuTab: action.index});
