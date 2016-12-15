@@ -1,3 +1,8 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 li {
     list-style-type: none;
     cursor: pointer;
@@ -17,8 +22,15 @@ li {
     width: 33.3%;
     margin: 0 auto;
     text-align: center;
-    padding: 10px;
+    padding: 0;
     background-color: #dddddd;
+}
+
+.main-menu > li > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10px;
 }
 
 .main-menu li:hover {
@@ -27,7 +39,7 @@ li {
 
 .main-menu li.selected {
     background-color: #444444;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .main-menu li:first-child {
@@ -49,8 +61,7 @@ li {
 .nav-tabs-menu {
     display: flex;
     justify-content: space-around;
-    border-bottom: 1px solid #cccccc;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
     text-align: center;
 }
@@ -59,6 +70,13 @@ li {
     background-color: #cccccc;
     width: 100%;
     background-clip: border-box;
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.nav-tabs-menu li.selected {
+    background-color: #ffffff;
+    border: none;
 }
 
 .nav-tabs-menu li:first-child {
@@ -67,4 +85,8 @@ li {
 
 .nav-tabs-menu li:last-child {
     border-radius: 0 10px 0 0;
+}
+
+.simple-menu li.selected {
+    color: red;
 }

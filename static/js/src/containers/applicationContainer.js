@@ -14,7 +14,9 @@ function getCurrentMenuTabs (state) {
     })
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+    state = Object.assign({}, state, ownProps.routeParams);
+    console.log(state);
     return getCurrentMenuTabs( state );
 };
 

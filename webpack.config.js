@@ -29,11 +29,22 @@ module.exports = {
 
     devtool: "eval",
 
+    devServer: {
+        historyApiFallback: {
+            rewrites: [
+                { from: /^\/$/, to: '/template.html' }
+            ]
+        },
+        compress: true,
+        port: 9000
+    },
+
     externals: {
         "react": "React",
         "react-dom": "ReactDOM",
         "react-redux": "ReactRedux",
-        "redux": "Redux"
+        "redux": "Redux",
+        "react-router": "ReactRouter"
     },
 
     plugins: [
